@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node server.js"
   },
+  "bin": {
+    "vis-bonjour-network": "./bin/vis-bonjour-network"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wyvernnot/vis-bonjour-network.git"
