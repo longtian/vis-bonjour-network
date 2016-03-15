@@ -10,7 +10,7 @@ vis-bonjour-network
 Visualize your local network using bonjour protocol
 
 
-![screenshot](./screenshot.png)
+![screenshot](https://github.com/wyvernnot/vis-bonjour-network/raw/master/screenshot.png)
 
 ### About
 
