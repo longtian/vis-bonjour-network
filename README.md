@@ -9,19 +9,39 @@ vis-bonjour-network
 
 Visualize your local network using bonjour protocol
 
+
 ![screenshot](./screenshot.png)
 
-**Run the Node.JS server**
+### About
+
+This command line tool will start a http server at `http://127.0.0.1:3000` and render bonjour network topology in browser.
+
+### Installation and Usage
+
+**Installation**
 
 ```sh
-git clone git@github.com:wyvernnot/vis-bonjour-network.git
-cd vis-bonjour-network
-npm install
-npm start
+npm install vis-bonjour-network -g
 ```
 
-**Open browser**
+**Usage**
 
+```txt
+Usage: vis-bonjour-network [options]
+
+Options:
+  -p, --port  server port                                        [default: 3000]
+  -h, --help  Show help                                                [boolean]
+
+copyright 2016
 ```
-http://127.0.0.1:3000
+
+### Docker Usage
+
+```sh
+docker run -d --net=host  wyvernnot/vis-bonjour-network
 ```
+
+### License
+
+MIT

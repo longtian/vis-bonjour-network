@@ -4,6 +4,7 @@
   "description": "Visualize bonjour network",
   "main": "server.js",
   "scripts": {
+    "release": "npm publish --reg=https://registry.npmjs.com",
     "start": "node server.js"
   },
   "bin": {
