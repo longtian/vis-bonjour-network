@@ -1,3 +1,13 @@
+var argv = require('yargs')
+  .usage('Usage: $0 [options]')
+  .default('port', 3000)
+  .describe('port',"server port")
+  .alias('p', 'port')
+  .help('help')
+  .alias('h', 'help')
+  .epilog('copyright 2016')
+  .argv;
+
 var WebSocketServer = require('ws').Server;
 var express = require('express');
 var server = require('http').createServer();
@@ -53,4 +63,12 @@ server.on('listening', function () {
   }
 });
 
-server.listen(3000)
+server.listen(argv.port);
+
+process.on('SIGINT', function () {
+  process.exit(0)
+});
+
+process.on('SIGTERM', function () {
+  process.exit(0)
+});
