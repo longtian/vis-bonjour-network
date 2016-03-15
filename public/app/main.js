@@ -33,7 +33,7 @@ $(function () {
       })
 
       services.forEach(function (item) {
-        var host_id = item.addresses.join('，');
+        var host_id = item.addresses.join('，') + item.host;
 
         var host = {
           id: host_id,
@@ -47,7 +47,8 @@ $(function () {
           edges.add({
             from: "9587",
             to: host_id,
-            label: item.addresses && item.addresses[1]
+            label: item.addresses && item.addresses[1],
+            dashes: true
           });
 
         }
@@ -57,15 +58,18 @@ $(function () {
         var app = {
           id: app_id,
           label: item.type + ":" + item.port,
-          shape: "square",
-          color: "#ccc"
+          shape: "box",
+          color: item.port == 9 ? "#eee" : "#aaa"
         }
 
         if (!nodes.get(app_id)) {
           nodes.add(app);
           edges.add({
             from: host_id,
-            to: app_id
+            to: app_id,
+            color: {
+              inherit: 'to'
+            }
           })
         }
 
