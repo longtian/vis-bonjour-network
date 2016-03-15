@@ -1,0 +1,26 @@
+{
+  "name": "vis-bonjour-network",
+  "version": "0.0.1",
+  "description": "Visualize bonjour network",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyvernnot/vis-bonjour-network.git"
+  },
+  "author": "wyvernnot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wyvernnot/vis-bonjour-network/issues"
+  },
+  "homepage": "https://github.com/wyvernnot/vis-bonjour-network#readme",
+  "dependencies": {
+    "bonjour": "^3.2.2",
+    "express": "^4.13.4",
+    "jquery": "^2.2.1",
+    "vis": "^4.15.1",
+    "ws": "^1.0.1"
+  }
+}
