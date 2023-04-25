@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/wyvernnot/vis-bonjour-network#readme",
   "dependencies": {
-    "bonjour": "^3.2.2",
+    "bonjour-service": "^1.1.1",
     "express": "^4.13.4",
     "jquery": "^2.2.1",
     "vis": "^4.15.1",

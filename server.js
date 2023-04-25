@@ -11,7 +11,7 @@ var argv = require('yargs')
 var WebSocketServer = require('ws').Server;
 var express = require('express');
 var server = require('http').createServer();
-var bonjour = require('bonjour');
+var bonjour = require('bonjour-service');
 var wss = new WebSocketServer({
   server: server
 });
@@ -34,7 +34,9 @@ app.get('/whoami.json', function (req, res) {
   });
 });
 
-bonjour().find(function (service) {
+const instance = new bonjour.Bonjour()
+
+instance.find(function (service) {
 
   wss.clients.forEach(function (client) {
     console.log('publish_new_service');
