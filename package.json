@@ -1,6 +1,6 @@
 {
   "name": "vis-bonjour-network",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Visualize bonjour network",
   "main": "server.js",
   "scripts": {
